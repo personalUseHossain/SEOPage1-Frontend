@@ -7,7 +7,6 @@ async function getUploadeFileCount() {
     `https://seopage1.glitch.me/file-counts`
   );
   const response = await request.json();
-  console.log(response)
   return response
 }
 

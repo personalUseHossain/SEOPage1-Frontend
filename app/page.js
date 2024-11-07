@@ -32,8 +32,14 @@ export default function Home() {
     },
     {
       id: 5,
-      hasIcon: true,
+      hasIcon: false,
       todoName: "Completed",
+      todosCount: 0
+    },
+    {
+      id: 6,
+      hasIcon: false,
+      todoName: "Over Date",
       todosCount: 0
     }
   ]
