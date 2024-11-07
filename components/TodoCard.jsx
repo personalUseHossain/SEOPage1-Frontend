@@ -53,7 +53,7 @@ export default function TodoCard({ columnIndex, rowIndex, attachmentCount }) {
 
   async function getUploadedFiles() {
     const request = await fetch(
-      `http://localhost:5000/files/${rowIndex}_${columnIndex}`
+      `https://seopage1.glitch.me/files/${rowIndex}_${columnIndex}`
     );
     const response = await request.json();
     if (response.files) {
@@ -76,7 +76,7 @@ export default function TodoCard({ columnIndex, rowIndex, attachmentCount }) {
 
     try {
       setUploadStatus("Uploading...");
-      const response = await fetch("http://localhost:5000/upload", {
+      const response = await fetch("https://seopage1.glitch.me/upload", {
         method: "POST",
         body: formData,
       });
@@ -214,7 +214,7 @@ export default function TodoCard({ columnIndex, rowIndex, attachmentCount }) {
     {uploadedFiles.map((file, index) => (
       <div key={index} className="file-item bg-[whitesmoke] p-2 mt-5 rounded-lg shadow-md">
         <a
-          href={`http://localhost:5000/uploads/${rowIndex}_${columnIndex}/${file}`}
+          href={`https://seopage1.glitch.me/uploads/${rowIndex}_${columnIndex}/${file}`}
           target="_blank"
           rel="noopener noreferrer"
           className="file-link flex items-center space-x-2 text-blue-500 hover:text-blue-700"

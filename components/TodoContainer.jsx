@@ -4,7 +4,7 @@ import TodoCard from './TodoCard'
 
 async function getUploadeFileCount() {
   const request = await fetch(
-    `http://localhost:5000/file-counts`
+    `https://seopage1.glitch.me/file-counts`
   );
   const response = await request.json();
   console.log(response)
@@ -27,7 +27,7 @@ export default async function TodoContainer({index, todoName, todosCount, hasIco
       </div>
       <div className='grid gap-3 overflow-y-scroll' style={{height: '80vh'}}>
         {Array.from({length: 15}).map((_, idx)=>{
-          return <TodoCard columnIndex={idx} rowIndex={index} attachmentCount={uploadedFilesCount.filter((obj)=> obj.folder == `${index}_${idx}`)[0]?.fileCount || 0}/>
+          return <TodoCard key={idx} columnIndex={idx} rowIndex={index} attachmentCount={uploadedFilesCount.filter((obj)=> obj.folder == `${index}_${idx}`)[0]?.fileCount || 0}/>
         })}
       </div>
     </div>
