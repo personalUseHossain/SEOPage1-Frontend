@@ -1,0 +1,97 @@
+.todoText{
+    white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  width: 300px;
+}
+
+
+/* modal */
+
+/* Modal background */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* To ensure it appears on top */
+  overflow: auto;
+  display: flex;
+}
+
+/* Modal content */
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: black;
+}
+
+
+
+.file-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+  margin: 5px 0;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.file-item:hover {
+  background-color: #e9e9e9;
+  transform: translateX(5px);
+}
+
+.file-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 5px 10px;
+}
+
+.file-link:hover {
+  color: #007bff;
+}
+
+.file-icon {
+  margin-right: 8px;
+  color: #007bff;
+  font-size: 16px;
+}
+
+.file-name {
+  word-wrap: break-word;
+  max-width: 200px; /* You can adjust this based on your layout */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
